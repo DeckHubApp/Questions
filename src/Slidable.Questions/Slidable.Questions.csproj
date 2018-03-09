@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ShtikLive.Questions.Data\ShtikLive.Questions.Data.csproj" />
+    <ProjectReference Include="..\Slidable.Questions.Data\Slidable.Questions.Data.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,7 @@
 ﻿using System;
-using ShtikLive.Questions.Data;
+using Slidable.Questions.Data;
 
-namespace ShtikLive.Questions.Models
+namespace Slidable.Questions.Models
 {
     public class AnswerDto
     {

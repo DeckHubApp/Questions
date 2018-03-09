@@ -2,7 +2,7 @@
 using JetBrains.Annotations;
 using Microsoft.EntityFrameworkCore;
 
-namespace ShtikLive.Questions.Data
+namespace Slidable.Questions.Data
 {
     public class QuestionContext : DbContext
     {

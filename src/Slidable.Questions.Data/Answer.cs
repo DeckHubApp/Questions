@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace ShtikLive.Questions.Data
+namespace Slidable.Questions.Data
 {
     public class Answer
     {

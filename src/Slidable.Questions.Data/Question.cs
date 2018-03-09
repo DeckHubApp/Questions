@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace ShtikLive.Questions.Data
+namespace Slidable.Questions.Data
 {
     public class Question
     {

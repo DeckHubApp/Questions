@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace ShtikLive.Questions.Migrate
+namespace Slidable.Questions.Migrate
 {
     public static class EventIds
     {

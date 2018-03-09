@@ -1,4 +1,4 @@
-﻿namespace ShtikLive.Questions.Options
+﻿namespace Slidable.Questions.Options
 {
     public class RedisOptions
     {

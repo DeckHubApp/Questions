@@ -3,11 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ShtikLive.Questions.Data;
-using ShtikLive.Questions.Options;
-using StackExchange.Redis;
+using Slidable.Questions.Data;
 
-namespace ShtikLive.Questions
+namespace Slidable.Questions
 {
     public class Startup
     {

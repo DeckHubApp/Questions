@@ -4,11 +4,11 @@ VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D135DB95-00C4-4592-BC47-4E5C60F99AFA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShtikLive.Questions", "src\ShtikLive.Questions\ShtikLive.Questions.csproj", "{8E62E3DE-DA2E-46B3-898C-F8EF7F1C26B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slidable.Questions", "src\Slidable.Questions\Slidable.Questions.csproj", "{8E62E3DE-DA2E-46B3-898C-F8EF7F1C26B2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShtikLive.Questions.Data", "src\ShtikLive.Questions.Data\ShtikLive.Questions.Data.csproj", "{6EDA66D5-6F7A-4121-A2E0-4CED07BC2200}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slidable.Questions.Data", "src\Slidable.Questions.Data\Slidable.Questions.Data.csproj", "{6EDA66D5-6F7A-4121-A2E0-4CED07BC2200}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShtikLive.Questions.Migrate", "src\ShtikLive.Questions.Migrate\ShtikLive.Questions.Migrate.csproj", "{5614C1E3-56B8-4744-BC0C-7C2DC18CF413}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slidable.Questions.Migrate", "src\Slidable.Questions.Migrate\Slidable.Questions.Migrate.csproj", "{5614C1E3-56B8-4744-BC0C-7C2DC18CF413}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using ShtikLive.Questions.Data;
-using ShtikLive.Questions.Models;
-using StackExchange.Redis;
+using Slidable.Questions.Data;
+using Slidable.Questions.Models;
 
-namespace ShtikLive.Questions.Controllers
+namespace Slidable.Questions.Controllers
 {
     public class QuestionsController : Controller
     {

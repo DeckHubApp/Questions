@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Npgsql;
 using Polly;
-using ShtikLive.Questions.Data;
+using Slidable.Questions.Data;
 
-namespace ShtikLive.Questions.Migrate
+namespace Slidable.Questions.Migrate
 {
     public class MigrationHelper
     {

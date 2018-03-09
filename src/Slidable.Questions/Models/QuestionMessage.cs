@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ShtikLive.Questions.Models
+namespace Slidable.Questions.Models
 {
     public class QuestionMessage
     {

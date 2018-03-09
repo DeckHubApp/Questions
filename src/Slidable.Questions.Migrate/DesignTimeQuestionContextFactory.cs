@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using ShtikLive.Questions.Data;
+using Slidable.Questions.Data;
 
-namespace ShtikLive.Questions.Migrate
+namespace Slidable.Questions.Migrate
 {
     public class DesignTimeQuestionContextFactory : IDesignTimeDbContextFactory<QuestionContext>
     {

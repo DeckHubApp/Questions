@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using ShtikLive.Questions.Data;
+using Slidable.Questions.Data;
 
-namespace ShtikLive.Questions.Models
+namespace Slidable.Questions.Models
 {
     public class QuestionDto
     {

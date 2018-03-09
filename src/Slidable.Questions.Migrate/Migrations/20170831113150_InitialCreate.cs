@@ -1,9 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using System;
-using System.Collections.Generic;
 
-namespace ShtikLive.Questions.Migrate.Migrations
+namespace Slidable.Questions.Migrate.Migrations
 {
     public partial class InitialCreate : Migration
     {
