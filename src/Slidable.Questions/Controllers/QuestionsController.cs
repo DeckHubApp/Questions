@@ -15,11 +15,13 @@ namespace Slidable.Questions.Controllers
     {
         private readonly QuestionContext _context;
         private readonly ILogger<QuestionsController> _logger;
+        private readonly RedisPublisher _redis;
 
-        public QuestionsController(QuestionContext context, ILogger<QuestionsController> logger)
+        public QuestionsController(QuestionContext context, ILogger<QuestionsController> logger, RedisPublisher redis)
         {
             _context = context;
             _logger = logger;
+            _redis = redis;
         }
 
         [HttpGet("{presenter}/{slug}")]
@@ -105,6 +107,7 @@ namespace Slidable.Questions.Controllers
             {
                 _context.Questions.Add(question);
                 await _context.SaveChangesAsync(ct);
+                _redis.PublishQuestion(presenter, slug, question.Text, question.Uuid, question.User);
             }
             catch (Exception ex)
             {
