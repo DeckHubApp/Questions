@@ -1,31 +1,18 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using RendleLabs.EntityFrameworkCore.MigrateHelper;
 using Slidable.Questions.Data;
 
 namespace Slidable.Questions.Migrate
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            var connectionString = args.Length == 1
-                ? args[0]
-                : DesignTimeQuestionContextFactory.LocalPostgres;
-
-            var options = new DbContextOptionsBuilder<QuestionContext>()
-                .UseNpgsql(connectionString, b => b.MigrationsAssembly(DesignTimeQuestionContextFactory.MigrationAssemblyName))
-                .Options;
-
-            var context = new QuestionContext(options);
-
-            var loggerFactory = new LoggerFactory().AddConsole();
-
-            var migrationHelper = new MigrationHelper(loggerFactory);
-
-            Console.WriteLine("Trying migration...");
-            migrationHelper.TryMigrate(context).GetAwaiter().GetResult();
-            Console.WriteLine("Done.");
+            var loggerFactory = new LoggerFactory().AddConsole((_, level) => true);
+            await new MigrationHelper(loggerFactory).TryMigrate(args);
         }
     }
 }

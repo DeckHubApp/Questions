@@ -9,7 +9,7 @@ namespace Slidable.Questions.Controllers
             return new OkObjectResult(value);
         }
 
-        public static IActionResult NotFound()
+        public static ActionResult NotFound()
         {
             return new NotFoundResult();
         }

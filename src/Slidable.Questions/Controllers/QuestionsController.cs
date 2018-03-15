@@ -23,7 +23,8 @@ namespace Slidable.Questions.Controllers
         }
 
         [HttpGet("{presenter}/{slug}")]
-        public async Task<IActionResult> GetForShow(string presenter, string slug, CancellationToken ct)
+        public async Task<ActionResult<List<QuestionDto>>> GetForShow(string presenter, string slug,
+            CancellationToken ct)
         {
             var showIdentifier = $"{presenter}/{slug}";
             List<Question> questions;
@@ -41,11 +42,11 @@ namespace Slidable.Questions.Controllers
                 _logger.LogError(EventIds.DatabaseError, ex, ex.Message);
                 throw;
             }
-            return Ok(questions.Select(QuestionDto.FromQuestion));
+            return questions.Select(QuestionDto.FromQuestion).ToList();
         }
 
         [HttpGet("{presenter}/{slug}/{slide:int}")]
-        public async Task<IActionResult> GetForSlide(string presenter, string slug, int slide, CancellationToken ct)
+        public async Task<ActionResult<List<QuestionDto>>> GetForSlide(string presenter, string slug, int slide, CancellationToken ct)
         {
             var showIdentifier = $"{presenter}/{slug}";
             List<Question> questions;
@@ -63,11 +64,11 @@ namespace Slidable.Questions.Controllers
                 _logger.LogError(EventIds.DatabaseError, ex, ex.Message);
                 throw;
             }
-            return Ok(questions.Select(QuestionDto.FromQuestion));
+            return questions.Select(QuestionDto.FromQuestion).ToList();
         }
 
         [HttpGet("{uuid}")]
-        public async Task<IActionResult> Get(string uuid, CancellationToken ct)
+        public async Task<ActionResult<QuestionDto>> Get(string uuid, CancellationToken ct)
         {
             Question question;
             try
@@ -81,7 +82,7 @@ namespace Slidable.Questions.Controllers
                 throw;
             }
             if (question == null) return NotFound();
-            return Ok(QuestionDto.FromQuestion(question));
+            return QuestionDto.FromQuestion(question);
         }
 
         [HttpPost("{presenter}/{slug}/{slide:int}")]
