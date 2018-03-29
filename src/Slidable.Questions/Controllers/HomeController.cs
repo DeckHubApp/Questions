@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -11,17 +13,24 @@ using Slidable.Questions.Models;
 
 namespace Slidable.Questions.Controllers
 {
-    public class QuestionsController : Controller
+    [Route("")]
+    public class HomeController : Controller
     {
         private readonly QuestionContext _context;
-        private readonly ILogger<QuestionsController> _logger;
+        private readonly ILogger<HomeController> _logger;
         private readonly RedisPublisher _redis;
 
-        public QuestionsController(QuestionContext context, ILogger<QuestionsController> logger, RedisPublisher redis)
+        public HomeController(QuestionContext context, ILogger<HomeController> logger, RedisPublisher redis)
         {
             _context = context;
             _logger = logger;
             _redis = redis;
+        }
+
+        [HttpGet]
+        public string Test()
+        {
+            return "Hello";
         }
 
         [HttpGet("{presenter}/{slug}")]
@@ -87,6 +96,7 @@ namespace Slidable.Questions.Controllers
             return QuestionDto.FromQuestion(question);
         }
 
+        [Authorize]
         [HttpPost("{presenter}/{slug}/{slide:int}")]
         public async Task<IActionResult> Ask(string presenter, string slug, int slide,
             [FromBody] QuestionDto dto, CancellationToken ct)
@@ -99,7 +109,7 @@ namespace Slidable.Questions.Controllers
                 Show = identifier,
                 Slide = slide,
                 Text = dto.Text,
-                User = dto.User,
+                From = dto.From,
                 Time = dto.Time
             };
 
@@ -107,7 +117,7 @@ namespace Slidable.Questions.Controllers
             {
                 _context.Questions.Add(question);
                 await _context.SaveChangesAsync(ct);
-                _redis.PublishQuestion(presenter, slug, question.Text, question.Uuid, question.User);
+                _redis.PublishQuestion(question);
             }
             catch (Exception ex)
             {
@@ -115,10 +125,10 @@ namespace Slidable.Questions.Controllers
                 throw;
             }
 
-            return CreatedAtAction("Get", new {uuid = question.Uuid}, question);
+            return CreatedAtAction("Get", new {uuid = question.Uuid}, QuestionDto.FromQuestion(question));
         }
 
-        [HttpPost("{uuid}/answers")]
+        [HttpGet("{uuid}/answers")]
         public async Task<IActionResult> Answers(string uuid, CancellationToken ct)
         {
             List<Answer> answers;
@@ -138,6 +148,7 @@ namespace Slidable.Questions.Controllers
             return Ok(answers.Select(a => AnswerDto.FromAnswer(uuid, a)));
         }
 
+        [Authorize]
         [HttpPost("{uuid}/answers")]
         public async Task<IActionResult> Answer(string uuid, [FromBody] AnswerDto dto, CancellationToken ct)
         {

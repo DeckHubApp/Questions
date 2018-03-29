@@ -17,7 +17,7 @@ namespace Slidable.Questions.Data
         public int Slide { get; set; }
 
         [MaxLength(16)]
-        public string User { get; set; }
+        public string From { get; set; }
 
         public string Text { get; set; }
 

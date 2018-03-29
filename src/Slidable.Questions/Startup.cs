@@ -1,12 +1,12 @@
 ﻿using JetBrains.Annotations;
-using MessagePack;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Slidable.Questions.Data;
-using Slidable.Questions.Models;
 using StackExchange.Redis;
 
 namespace Slidable.Questions
@@ -14,8 +14,12 @@ namespace Slidable.Questions
     [PublicAPI]
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private static ConnectionMultiplexer _connectionMultiplexer;
+        private readonly IHostingEnvironment _env;
+
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
+            _env = env;
             Configuration = configuration;
         }
 
@@ -24,13 +28,37 @@ namespace Slidable.Questions
         public void ConfigureServices(IServiceCollection services)
         {
             var redisHost = Configuration.GetSection("Redis").GetValue<string>("Host");
-            var redisPort = Configuration.GetSection("Redis").GetValue<int>("Port");
-            if (redisPort == 0)
+            if (!string.IsNullOrWhiteSpace(redisHost))
             {
-                redisPort = 6379;
+                var redisPort = Configuration.GetSection("Redis").GetValue<int>("Port");
+                if (redisPort == 0)
+                {
+                    redisPort = 6379;
+                }
+
+                _connectionMultiplexer = ConnectionMultiplexer.Connect($"{redisHost}:{redisPort}");
+                services.AddSingleton(_connectionMultiplexer);
+            }
+            else
+            {
+                services.AddSingleton<ConnectionMultiplexer>(_ => null);
             }
 
-            services.AddSingleton(_ => ConnectionMultiplexer.Connect($"{redisHost}:{redisPort}"));
+            if (!_env.IsDevelopment())
+            {
+                var dpBuilder = services.AddDataProtection().SetApplicationName("slidable");
+
+                if (_connectionMultiplexer != null)
+                {
+                    dpBuilder.PersistKeysToRedis(_connectionMultiplexer, "DataProtection:Keys");
+                }
+            }
+            else
+            {
+                services.AddDataProtection()
+                    .DisableAutomaticKeyGeneration()
+                    .SetApplicationName("slidable");
+            }
             services.AddSingleton<RedisPublisher>();
 
             services.AddDbContextPool<QuestionContext>(b =>
@@ -41,38 +69,29 @@ namespace Slidable.Questions
             services.AddMvc();
         }
 
+        private void ConfigureAuth(IServiceCollection services)
+        {
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie();
+        }
+
+
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            var pathBase = Configuration["Runtime:PathBase"];
+            if (!string.IsNullOrEmpty(pathBase))
+            {
+                app.UsePathBase(pathBase);
+            }
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
+
             app.UseMvc();
-        }
-    }
-
-    public class RedisPublisher
-    {
-        private readonly ConnectionMultiplexer _redis;
-
-        public RedisPublisher(ConnectionMultiplexer redis)
-        {
-            _redis = redis;
-        }
-
-        public void PublishQuestion(string presenter, string slug, string question, string id, string from)
-        {
-            var m = new QuestionMsg
-            {
-                Presenter = presenter,
-                Slug = slug,
-                From = from,
-                Id = id,
-                Text = question
-            };
-
-            _redis.GetSubscriber().Publish("slidable:question", MessagePackSerializer.Serialize(m));
         }
     }
 }
