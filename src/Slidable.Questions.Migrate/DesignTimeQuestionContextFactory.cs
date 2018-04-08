@@ -7,7 +7,7 @@ namespace Slidable.Questions.Migrate
 {
     public class DesignTimeQuestionContextFactory : IDesignTimeDbContextFactory<QuestionContext>
     {
-        public const string LocalPostgres = "Host=localhost;Database=questions;Username=slidable;Password=secretsquirrel";
+        public const string LocalPostgres = "Host=localhost;Database=questions;Username=slidable;Password=SecretSquirrel";
 
         public static readonly string MigrationAssemblyName =
             typeof(DesignTimeQuestionContextFactory).Assembly.GetName().Name;

@@ -1,4 +1,17 @@
-﻿(function() {
+﻿(function(Slidable, currentScript) {
+
+  Slidable = Slidable || {};
+
+  function _urlPrefix(src) {
+    let parts = src.split('/').filter(s => !!s).slice(3, -1);
+    if (parts.length === 0) {
+      return '';
+    }
+    return `/${parts.join('/')}`;
+  }
+
+  const urlPrefix = _urlPrefix(currentScript.src);
+
   function checkStatus(response) {
     if (response.status >= 200 && response.status < 300) {
       return response;
@@ -9,12 +22,17 @@
     }
   }
 
+  function pagePath() {
+    return Slidable.DEV_PATH || window.location.pathname;
+  }
+
   function questionsUrl() {
-    const path = window.location.pathname.split('/');
+    const path = pagePath().split('/').filter(s => !!s);
     const slideNumber = path.pop();
     const slug = path.pop();
     const presenter = path.pop();
-    return `~/${presenter}/${slug}/${slideNumber}`;
+    const place = path.pop();
+    return `${urlPrefix}/${place}/${presenter}/${slug}/${slideNumber}`;
   }
 
   function load() {
@@ -34,10 +52,13 @@
 
   const questionFormComponent =
   {
-    template: `<form id="question-form" v-on:submit="submit">
-  <label for="questionText" class="control-label">Ask a Question:</label>
-  <textarea id="questionText" v-model="text"></textarea>
-  <button class="btn btn-primary btn-xs" type="submit" :disabled="button.disabled">{{button.text}}</button>
+    template: `<form id="question-form" v-on:submit="submit" class="form-inline">
+<div class="input-group">
+  <input id="questionText" v-model="text" placeholder="Ask a question" class="form-control" />
+  <div class="input-group-append">
+  <button class="btn btn-secondary" type="submit" :disabled="button.disabled">{{button.text}}</button>
+</div>
+</div>
 </form>`,
     data: () => ({
       text: '',
@@ -113,4 +134,4 @@
     },
     template: `<div><question-list></question-list><question-form></question-form></div>`
   });
-})();
+})(window.Slidable, document.currentScript);

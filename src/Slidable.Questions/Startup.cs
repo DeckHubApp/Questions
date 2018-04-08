@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Slidable.Questions.Data;
+using Slidable.Questions.Internals;
 using StackExchange.Redis;
 
 namespace Slidable.Questions
@@ -27,7 +28,9 @@ namespace Slidable.Questions
 
         public void ConfigureServices(IServiceCollection services)
         {
-            var redisHost = Configuration.GetSection("Redis").GetValue<string>("Host");
+            ConfigureAuth(services);
+
+            var redisHost = Configuration.GetSection("Redis").GetValue<string>("Hostname");
             if (!string.IsNullOrWhiteSpace(redisHost))
             {
                 var redisPort = Configuration.GetSection("Redis").GetValue<int>("Port");
@@ -64,6 +67,7 @@ namespace Slidable.Questions
             services.AddDbContextPool<QuestionContext>(b =>
             {
                 b.UseNpgsql(Configuration.GetConnectionString("Questions"));
+                b.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
             });
 
             services.AddMvc();
@@ -90,6 +94,15 @@ namespace Slidable.Questions
             }
 
             app.UseStaticFiles();
+
+            if (env.IsDevelopment())
+            {
+                app.UseMiddleware<BypassAuthMiddleware>();
+            }
+            else
+            {
+                app.UseAuthentication();
+            }
 
             app.UseMvc();
         }

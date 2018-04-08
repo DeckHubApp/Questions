@@ -4,92 +4,63 @@
     "files": [
       {
         "file": "/dist/README.md",
-        "cdn": "https://unpkg.com//vue@2.5.16/dist//dist/README.md",
-        "local": "wwwroot\\lib\\vue\\README.md",
+        "cdn": "https://unpkg.com/vue@2.5.16/dist/README.md",
+        "local": "wwwroot/lib/vue/README.md",
         "integrity": "sha384-ucd8wHqguXps3gIGkfmh04iW2NO7W47L1TtZtk3sc/BWUKzR7RWS+PY8hPtEP6JH"
       },
       {
         "file": "/dist/vue.common.js",
-        "cdn": "https://unpkg.com//vue@2.5.16/dist//dist/vue.common.js",
-        "local": "wwwroot\\lib\\vue\\vue.common.js",
+        "cdn": "https://unpkg.com/vue@2.5.16/dist/vue.common.js",
+        "local": "wwwroot/lib/vue/vue.common.js",
         "integrity": "sha384-x9F2L1ED20wm7Liqp4p9jZEpkxpoxvcsIw65NoFJr79YF5KKOQDOHgA2IMiouz5U"
       },
       {
         "file": "/dist/vue.esm.browser.js",
-        "cdn": "https://unpkg.com//vue@2.5.16/dist//dist/vue.esm.browser.js",
-        "local": "wwwroot\\lib\\vue\\vue.esm.browser.js",
+        "cdn": "https://unpkg.com/vue@2.5.16/dist/vue.esm.browser.js",
+        "local": "wwwroot/lib/vue/vue.esm.browser.js",
         "integrity": "sha384-xU/QpSwozYkjMD5oBzb1sX54aZMf9EPIwOFDT1jYA4TbDWulHXspCtMKyIwKbs92"
       },
       {
         "file": "/dist/vue.esm.js",
-        "cdn": "https://unpkg.com//vue@2.5.16/dist//dist/vue.esm.js",
-        "local": "wwwroot\\lib\\vue\\vue.esm.js",
+        "cdn": "https://unpkg.com/vue@2.5.16/dist/vue.esm.js",
+        "local": "wwwroot/lib/vue/vue.esm.js",
         "integrity": "sha384-ikrRQAiuIg+4mRkx0Ziyw2Y6ceX3BOcCDjz8/k6dREdtVYuRS1NFfYcL95F9AE4g"
       },
       {
         "file": "/dist/vue.js",
-        "cdn": "https://unpkg.com//vue@2.5.16/dist//dist/vue.js",
-        "local": "wwwroot\\lib\\vue\\vue.js",
+        "cdn": "https://unpkg.com/vue@2.5.16/dist/vue.js",
+        "local": "wwwroot/lib/vue/vue.js",
         "integrity": "sha384-uDHwRgVGzCbHUyl2dKQHqgCAab0OIx/w9PqT3pvjaX/ZGARjKanO5mJGjmdixblb"
       },
       {
         "file": "/dist/vue.min.js",
-        "cdn": "https://unpkg.com//vue@2.5.16/dist//dist/vue.min.js",
-        "local": "wwwroot\\lib\\vue\\vue.min.js",
+        "cdn": "https://unpkg.com/vue@2.5.16/dist/vue.min.js",
+        "local": "wwwroot/lib/vue/vue.min.js",
         "integrity": "sha384-DwsLA0O/He+RjlS7pFkqEHfsCgdTMU+nSuUq/qkxvKSTED+s4vRttKEZtf4xTW1+"
       },
       {
         "file": "/dist/vue.runtime.common.js",
-        "cdn": "https://unpkg.com//vue@2.5.16/dist//dist/vue.runtime.common.js",
-        "local": "wwwroot\\lib\\vue\\vue.runtime.common.js",
+        "cdn": "https://unpkg.com/vue@2.5.16/dist/vue.runtime.common.js",
+        "local": "wwwroot/lib/vue/vue.runtime.common.js",
         "integrity": "sha384-mpdUALdz6WzYB5OMCQUxxxAf4s/xsDFq3W9f200KihUuiuwe4e/8gQeJbp/sgBBm"
       },
       {
         "file": "/dist/vue.runtime.esm.js",
-        "cdn": "https://unpkg.com//vue@2.5.16/dist//dist/vue.runtime.esm.js",
-        "local": "wwwroot\\lib\\vue\\vue.runtime.esm.js",
+        "cdn": "https://unpkg.com/vue@2.5.16/dist/vue.runtime.esm.js",
+        "local": "wwwroot/lib/vue/vue.runtime.esm.js",
         "integrity": "sha384-pypXubjk0bOt8mXT2FEOA1UVJEQ3xzbAQKnQIG/nfRfgiM+1OQ80ecP+qfTy/dO4"
       },
       {
         "file": "/dist/vue.runtime.js",
-        "cdn": "https://unpkg.com//vue@2.5.16/dist//dist/vue.runtime.js",
-        "local": "wwwroot\\lib\\vue\\vue.runtime.js",
+        "cdn": "https://unpkg.com/vue@2.5.16/dist/vue.runtime.js",
+        "local": "wwwroot/lib/vue/vue.runtime.js",
         "integrity": "sha384-5SAmXXXLWsxZTad0xodNhwRUvD/6qX3UTX+R684HE/dEtc0SnEc+QZA+dUSPePqB"
       },
       {
         "file": "/dist/vue.runtime.min.js",
-        "cdn": "https://unpkg.com//vue@2.5.16/dist//dist/vue.runtime.min.js",
-        "local": "wwwroot\\lib\\vue\\vue.runtime.min.js",
+        "cdn": "https://unpkg.com/vue@2.5.16/dist/vue.runtime.min.js",
+        "local": "wwwroot/lib/vue/vue.runtime.min.js",
         "integrity": "sha384-IP6/tCms4r82LjUi9KzqYqtnELsEir1ynpgjEHTphyuYmB1wIII9DaYPgZ/62JA2"
-      }
-    ]
-  },
-  "bootswatch/darkly": {
-    "version": "bootswatch@4.0.0",
-    "files": [
-      {
-        "file": "/dist/darkly/_bootswatch.scss",
-        "cdn": "https://unpkg.com//bootswatch@4.0.0/dist/darkly//dist/darkly/_bootswatch.scss",
-        "local": "wwwroot\\lib\\bootswatch/darkly\\darkly\\_bootswatch.scss",
-        "integrity": "sha384-IiVHP6uJPrhHq6Z5TXKtIxjUfRvsOBZcEs/64iiTEp+01V0qeKOFlZ6aFhvLEW0D"
-      },
-      {
-        "file": "/dist/darkly/_variables.scss",
-        "cdn": "https://unpkg.com//bootswatch@4.0.0/dist/darkly//dist/darkly/_variables.scss",
-        "local": "wwwroot\\lib\\bootswatch/darkly\\darkly\\_variables.scss",
-        "integrity": "sha384-Z+HcDTVnK/D9rVgzzRrQc7IV60sNYPAWtWukgoKDuerdRDatAvQk0AgkVjcHrRtb"
-      },
-      {
-        "file": "/dist/darkly/bootstrap.css",
-        "cdn": "https://unpkg.com//bootswatch@4.0.0/dist/darkly//dist/darkly/bootstrap.css",
-        "local": "wwwroot\\lib\\bootswatch/darkly\\darkly\\bootstrap.css",
-        "integrity": "sha384-MtDYCLkEI7u+9Bnye5jvJeQwVrOZQ2QFGEyyNY7gZg9cn7lU27HCFhlh3C41GW6o"
-      },
-      {
-        "file": "/dist/darkly/bootstrap.min.css",
-        "cdn": "https://unpkg.com//bootswatch@4.0.0/dist/darkly//dist/darkly/bootstrap.min.css",
-        "local": "wwwroot\\lib\\bootswatch/darkly\\darkly\\bootstrap.min.css",
-        "integrity": "sha384-p8bH4RlA/kdF4wbAoep+/6VeOQI2IAWa9zLjTIQbQLv2FuCjX/W/FkdYdeKISDvK"
       }
     ]
   },
@@ -98,272 +69,123 @@
     "files": [
       {
         "file": "/dist/css/bootstrap-grid.css",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/css/bootstrap-grid.css",
-        "local": "wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.css",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/css/bootstrap-grid.css",
+        "local": "wwwroot/lib/bootstrap/css/bootstrap-grid.css",
         "integrity": "sha384-Ips6r+0ITXXoN2oXjBWI4gq2uk2bUAVmaVP2e29rv1d6K9uDxVibC/tGd1EopQYn"
       },
       {
         "file": "/dist/css/bootstrap-grid.css.map",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/css/bootstrap-grid.css.map",
-        "local": "wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.css.map",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/css/bootstrap-grid.css.map",
+        "local": "wwwroot/lib/bootstrap/css/bootstrap-grid.css.map",
         "integrity": "sha384-k8TFxVvCZfspiAtURBaKEj9V5jDBm0CiO+pIVKdleMH03wyKmrzGXk2TD/lo9djJ"
       },
       {
         "file": "/dist/css/bootstrap-grid.min.css",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/css/bootstrap-grid.min.css",
-        "local": "wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.min.css",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/css/bootstrap-grid.min.css",
+        "local": "wwwroot/lib/bootstrap/css/bootstrap-grid.min.css",
         "integrity": "sha384-jU4CJoUdEG33AmG7VvO7REtpodKn/YT0vjtWmJfLm3rlc89nEpPMleu4wYttxaA+"
       },
       {
         "file": "/dist/css/bootstrap-grid.min.css.map",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/css/bootstrap-grid.min.css.map",
-        "local": "wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.min.css.map",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/css/bootstrap-grid.min.css.map",
+        "local": "wwwroot/lib/bootstrap/css/bootstrap-grid.min.css.map",
         "integrity": "sha384-i1d4+Z4vYXVASF4PSSA1bEkWYdTGeOxCPTjM5MzcIw7nz4fh2pwq3kP0UszwpDNi"
       },
       {
         "file": "/dist/css/bootstrap-reboot.css",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/css/bootstrap-reboot.css",
-        "local": "wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.css",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/css/bootstrap-reboot.css",
+        "local": "wwwroot/lib/bootstrap/css/bootstrap-reboot.css",
         "integrity": "sha384-aNTgAiFIk4XL1CrW8yW9cwsVchOFrVUlsD70Zj3WZKZ1FKekYcXTJ4iIjCjshhCr"
       },
       {
         "file": "/dist/css/bootstrap-reboot.css.map",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/css/bootstrap-reboot.css.map",
-        "local": "wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.css.map",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/css/bootstrap-reboot.css.map",
+        "local": "wwwroot/lib/bootstrap/css/bootstrap-reboot.css.map",
         "integrity": "sha384-ZeYyAz0/rieHYtD1PA7Zf2I/155BcW+v0YEs8N9i9KQxn2U+bE7ODYSJvRj2SubH"
       },
       {
         "file": "/dist/css/bootstrap-reboot.min.css",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/css/bootstrap-reboot.min.css",
-        "local": "wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.min.css",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/css/bootstrap-reboot.min.css",
+        "local": "wwwroot/lib/bootstrap/css/bootstrap-reboot.min.css",
         "integrity": "sha384-tXZXZ8/9fzWBr4+NpIqlYP6f79bCNrZjTqcnHs3NrSTS6AEv1SJYS/S14BwGl0X9"
       },
       {
         "file": "/dist/css/bootstrap-reboot.min.css.map",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/css/bootstrap-reboot.min.css.map",
-        "local": "wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.min.css.map",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/css/bootstrap-reboot.min.css.map",
+        "local": "wwwroot/lib/bootstrap/css/bootstrap-reboot.min.css.map",
         "integrity": "sha384-8jQYYSbb176FB2jSj5EUZixwgK2CtTht9x47PlVV8mhd5OG1NHgD+EDT+en3YkCr"
       },
       {
         "file": "/dist/css/bootstrap.css",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/css/bootstrap.css",
-        "local": "wwwroot\\lib\\bootstrap\\css\\bootstrap.css",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/css/bootstrap.css",
+        "local": "wwwroot/lib/bootstrap/css/bootstrap.css",
         "integrity": "sha384-/Q7ctZ70waEBDSxNg1G3DP39fQFgLDEU1yhh9O0yQB9JVehvmFMkiXsyE/aY4c37"
       },
       {
         "file": "/dist/css/bootstrap.css.map",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/css/bootstrap.css.map",
-        "local": "wwwroot\\lib\\bootstrap\\css\\bootstrap.css.map",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/css/bootstrap.css.map",
+        "local": "wwwroot/lib/bootstrap/css/bootstrap.css.map",
         "integrity": "sha384-LPvL6ELg8t3FeU6OfyUogbFSfl7xqHRjRRiIEMFPIV9/GsOVPAb0qjs4p1rQXqKK"
       },
       {
         "file": "/dist/css/bootstrap.min.css",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/css/bootstrap.min.css",
-        "local": "wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/css/bootstrap.min.css",
+        "local": "wwwroot/lib/bootstrap/css/bootstrap.min.css",
         "integrity": "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       },
       {
         "file": "/dist/css/bootstrap.min.css.map",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/css/bootstrap.min.css.map",
-        "local": "wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css.map",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/css/bootstrap.min.css.map",
+        "local": "wwwroot/lib/bootstrap/css/bootstrap.min.css.map",
         "integrity": "sha384-5Ct0Be7JwZdVbHi5Y1o/WQF8TgjHrVZ+xieScbE7zTyKDItjyh6lbaJpbOY5yWoV"
       },
       {
         "file": "/dist/js/bootstrap.bundle.js",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/js/bootstrap.bundle.js",
-        "local": "wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/js/bootstrap.bundle.js",
+        "local": "wwwroot/lib/bootstrap/js/bootstrap.bundle.js",
         "integrity": "sha384-jsto7BKLxIckSZGIaMHhrgLyfPsKCpgz/n/8+LSM7Wu3jcOYL9aLBn42goF34TWC"
       },
       {
         "file": "/dist/js/bootstrap.bundle.js.map",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/js/bootstrap.bundle.js.map",
-        "local": "wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js.map",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/js/bootstrap.bundle.js.map",
+        "local": "wwwroot/lib/bootstrap/js/bootstrap.bundle.js.map",
         "integrity": "sha384-g9ztExxhvbat0r2sVl3YnTomPFdx0ikBVBjY1OtEBMo6N9ElPhEfyVq0rX901seU"
       },
       {
         "file": "/dist/js/bootstrap.bundle.min.js",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/js/bootstrap.bundle.min.js",
-        "local": "wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/js/bootstrap.bundle.min.js",
+        "local": "wwwroot/lib/bootstrap/js/bootstrap.bundle.min.js",
         "integrity": "sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D"
       },
       {
         "file": "/dist/js/bootstrap.bundle.min.js.map",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/js/bootstrap.bundle.min.js.map",
-        "local": "wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js.map",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/js/bootstrap.bundle.min.js.map",
+        "local": "wwwroot/lib/bootstrap/js/bootstrap.bundle.min.js.map",
         "integrity": "sha384-cH2LWMiZFzgQvUzyTqMxSL03OqQ9k80dQkcpCdjLA9S1xHxIW0vcVUITrXTQN0SE"
       },
       {
         "file": "/dist/js/bootstrap.js",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/js/bootstrap.js",
-        "local": "wwwroot\\lib\\bootstrap\\js\\bootstrap.js",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/js/bootstrap.js",
+        "local": "wwwroot/lib/bootstrap/js/bootstrap.js",
         "integrity": "sha384-MImDfgkPtUfLI+McZzk7WmwcipLy8dZSA4Xjm/3z9oF3lvguUMmR4Er9zwxBL+GF"
       },
       {
         "file": "/dist/js/bootstrap.js.map",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/js/bootstrap.js.map",
-        "local": "wwwroot\\lib\\bootstrap\\js\\bootstrap.js.map",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/js/bootstrap.js.map",
+        "local": "wwwroot/lib/bootstrap/js/bootstrap.js.map",
         "integrity": "sha384-9F5O2cMAENX6WZI2STVbvm28PR7MHqY0boQ/4pSFaEmumSdUX6/3hCXLVU2DDMBg"
       },
       {
         "file": "/dist/js/bootstrap.min.js",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/js/bootstrap.min.js",
-        "local": "wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/js/bootstrap.min.js",
+        "local": "wwwroot/lib/bootstrap/js/bootstrap.min.js",
         "integrity": "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       },
       {
         "file": "/dist/js/bootstrap.min.js.map",
-        "cdn": "https://unpkg.com//bootstrap@4.0.0/dist//dist/js/bootstrap.min.js.map",
-        "local": "wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js.map",
+        "cdn": "https://unpkg.com/bootstrap@4.0.0/dist/js/bootstrap.min.js.map",
+        "local": "wwwroot/lib/bootstrap/js/bootstrap.min.js.map",
         "integrity": "sha384-z6O90gb197ovur7VmmdSdZcjiLONfKgYTKvGLSbTtXgMXFx+w7JlQGJMvv4j1NbA"
-      }
-    ]
-  },
-  "popper.js": {
-    "version": "popper.js@1.14.1",
-    "files": [
-      {
-        "file": "/dist/esm/popper-utils.js",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/esm/popper-utils.js",
-        "local": "wwwroot\\lib\\popper.js\\esm\\popper-utils.js",
-        "integrity": "sha384-kIc7v7diVk/DTHZk8m57dlmP0Ci85I4yfBoFJt6UAWiCxEVvbVeFBhU0Ip2GeH8x"
-      },
-      {
-        "file": "/dist/esm/popper-utils.js.map",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/esm/popper-utils.js.map",
-        "local": "wwwroot\\lib\\popper.js\\esm\\popper-utils.js.map",
-        "integrity": "sha384-GUkXkkhhSP54HVlUwG92f2cvBbXk8JWJRVlS3JCx9kBJ9atJXCbs+6PJqSjSvEFx"
-      },
-      {
-        "file": "/dist/esm/popper-utils.min.js",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/esm/popper-utils.min.js",
-        "local": "wwwroot\\lib\\popper.js\\esm\\popper-utils.min.js",
-        "integrity": "sha384-yy0daxM1JNoatGJXqHrrDTsz9hqKyb5PtO8ylb6pW2WOqcz6kEn26KElgO4DlV6d"
-      },
-      {
-        "file": "/dist/esm/popper-utils.min.js.map",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/esm/popper-utils.min.js.map",
-        "local": "wwwroot\\lib\\popper.js\\esm\\popper-utils.min.js.map",
-        "integrity": "sha384-GkYCTx01+T/o/7QWgJQzE/ljjphbxI3h7fAP/kXp/n5YzVKfK7BUj19IJF+ZZ1dE"
-      },
-      {
-        "file": "/dist/esm/popper.js",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/esm/popper.js",
-        "local": "wwwroot\\lib\\popper.js\\esm\\popper.js",
-        "integrity": "sha384-49ucweKGabuFeZqZ5wYFwcuMC+QUXqfsjAbwZ2tu82N6++EpPgfE5PxXiUUc7pk+"
-      },
-      {
-        "file": "/dist/esm/popper.js.map",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/esm/popper.js.map",
-        "local": "wwwroot\\lib\\popper.js\\esm\\popper.js.map",
-        "integrity": "sha384-3StGw5lbxeHhKMmcaOF0SfAB7RaxAxp9DuX3JB5JP9R/FF6yqYabLMHvy3Vfwim5"
-      },
-      {
-        "file": "/dist/esm/popper.min.js",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/esm/popper.min.js",
-        "local": "wwwroot\\lib\\popper.js\\esm\\popper.min.js",
-        "integrity": "sha384-XDWymNl9WGxXZ2Z12ftfYi4MPJNr589mL3KDO4p0c5cs+Aczqx8AEEQ0hFyeQStD"
-      },
-      {
-        "file": "/dist/esm/popper.min.js.map",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/esm/popper.min.js.map",
-        "local": "wwwroot\\lib\\popper.js\\esm\\popper.min.js.map",
-        "integrity": "sha384-qczvoD7lxNgBGlV+GygCThbMBUENqKq03GBOkgc4eJ9REwWnKxwnvDW3qDwA5k66"
-      },
-      {
-        "file": "/dist/popper-utils.js",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/popper-utils.js",
-        "local": "wwwroot\\lib\\popper.js\\popper-utils.js",
-        "integrity": "sha384-CSdz2EYnXCYIlyCjOVe4tDe3WCHl8VEuIWIPgNg9TWnguxybQkiou5w0mobuMKSj"
-      },
-      {
-        "file": "/dist/popper-utils.js.map",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/popper-utils.js.map",
-        "local": "wwwroot\\lib\\popper.js\\popper-utils.js.map",
-        "integrity": "sha384-FLVnkjrZWnjlyF7ogeblrwIUOwssomaBxt0dXpY4v8DSDPp9I7j8bj4rWLf4IL46"
-      },
-      {
-        "file": "/dist/popper-utils.min.js",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/popper-utils.min.js",
-        "local": "wwwroot\\lib\\popper.js\\popper-utils.min.js",
-        "integrity": "sha384-hzUABZuTnr0UIseEdE6wHukObwkRvD8kUA5fG9Yq8+/xLKHuGbM15dVU/ES9Ymlo"
-      },
-      {
-        "file": "/dist/popper-utils.min.js.map",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/popper-utils.min.js.map",
-        "local": "wwwroot\\lib\\popper.js\\popper-utils.min.js.map",
-        "integrity": "sha384-xhEsFYHjdCRlRwepcWr1gldHHy7CnTbKl2ePVXXTlTpCpD7alAFsX9DA9sWd4dOQ"
-      },
-      {
-        "file": "/dist/popper.js",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/popper.js",
-        "local": "wwwroot\\lib\\popper.js\\popper.js",
-        "integrity": "sha384-6hk35Vj7a7SV2+EIxEzwBCvEYQ3xw5YzqPphJLZ7SaIT6WN2BqFLcHaEyRq2T8mN"
-      },
-      {
-        "file": "/dist/popper.js.map",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/popper.js.map",
-        "local": "wwwroot\\lib\\popper.js\\popper.js.map",
-        "integrity": "sha384-9MVEKeq8Pf3AWybEuwsXiIEdWeL85s48hLfqn9ewSrjVIDt83ncY61uIPcnoC9+z"
-      },
-      {
-        "file": "/dist/popper.min.js",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/popper.min.js",
-        "local": "wwwroot\\lib\\popper.js\\popper.min.js",
-        "integrity": "sha384-80P7WWw7s4+PJFtK+ImzkpUfTnX+Lu6PWnHuNaWeR2+Dsg0vGcNR7wvrIv3Ff4tY"
-      },
-      {
-        "file": "/dist/popper.min.js.map",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/popper.min.js.map",
-        "local": "wwwroot\\lib\\popper.js\\popper.min.js.map",
-        "integrity": "sha384-Zwcz2DmDzQTU3N8JI91IAtkCN6AK+sCXGSJDKrsCAvkcKT6kE/ZOpJeGnZlreaF/"
-      },
-      {
-        "file": "/dist/umd/popper-utils.js",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/umd/popper-utils.js",
-        "local": "wwwroot\\lib\\popper.js\\umd\\popper-utils.js",
-        "integrity": "sha384-VY+5/W3Tg9sMunyrZBV9FUJNOKNQSOBpYm9HmLwyliTrsnq5e7EnZOWyDLtAhJdb"
-      },
-      {
-        "file": "/dist/umd/popper-utils.js.map",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/umd/popper-utils.js.map",
-        "local": "wwwroot\\lib\\popper.js\\umd\\popper-utils.js.map",
-        "integrity": "sha384-jEl04k9kUcCXoA/nD1JfmZYyhWSt10P/rOHp2BTXp3D2OhNZbAg1HBx25zikr98Z"
-      },
-      {
-        "file": "/dist/umd/popper-utils.min.js",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/umd/popper-utils.min.js",
-        "local": "wwwroot\\lib\\popper.js\\umd\\popper-utils.min.js",
-        "integrity": "sha384-LFG0vLqtbIyCVFgF4gSKP08UmqisTrnyP65PyPZXD+hQaPw40AA+k9sfgPQNSJJs"
-      },
-      {
-        "file": "/dist/umd/popper-utils.min.js.map",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/umd/popper-utils.min.js.map",
-        "local": "wwwroot\\lib\\popper.js\\umd\\popper-utils.min.js.map",
-        "integrity": "sha384-FXbIWMSb5S2tDk7A0PFoduhp+a+rQGilVU6ExzlFkFO/i6LkqOh1ihNe0/f8en/y"
-      },
-      {
-        "file": "/dist/umd/popper.js",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/umd/popper.js",
-        "local": "wwwroot\\lib\\popper.js\\umd\\popper.js",
-        "integrity": "sha384-CgoAsb9hMCdxJBgGQIhrm8LuD18j3RZAVxntgi4Zz1/0v7Liu7WGzv1naCGgt4S/"
-      },
-      {
-        "file": "/dist/umd/popper.js.map",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/umd/popper.js.map",
-        "local": "wwwroot\\lib\\popper.js\\umd\\popper.js.map",
-        "integrity": "sha384-YzVZjp5mXEun/iZWVE76gXrx3cMmZhVcBchUBjWeWHt7BZuZs0TLs4HEv8WfYxUi"
-      },
-      {
-        "file": "/dist/umd/popper.min.js",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/umd/popper.min.js",
-        "local": "wwwroot\\lib\\popper.js\\umd\\popper.min.js",
-        "integrity": "sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-      },
-      {
-        "file": "/dist/umd/popper.min.js.map",
-        "cdn": "https://unpkg.com//popper.js@1.14.1/dist//dist/umd/popper.min.js.map",
-        "local": "wwwroot\\lib\\popper.js\\umd\\popper.min.js.map",
-        "integrity": "sha384-fjHoHlEkFuq7/gJcg7lEwASTRmWWlYM7oXDYplt7ZuymmbvocWh+wpkb226N4USi"
       }
     ]
   },
@@ -372,45 +194,223 @@
     "files": [
       {
         "file": "/dist/core.js",
-        "cdn": "https://unpkg.com//jquery@3.3.1/dist//dist/core.js",
-        "local": "wwwroot\\lib\\jquery\\core.js",
+        "cdn": "https://unpkg.com/jquery@3.3.1/dist/core.js",
+        "local": "wwwroot/lib/jquery/core.js",
         "integrity": "sha384-4DgMonRQKFPNLwrKAhrrvQjOrLH2vy8cAWZ2yOOSWpxhJ3n0H2vIDShidl2vFOjW"
       },
       {
         "file": "/dist/jquery.js",
-        "cdn": "https://unpkg.com//jquery@3.3.1/dist//dist/jquery.js",
-        "local": "wwwroot\\lib\\jquery\\jquery.js",
+        "cdn": "https://unpkg.com/jquery@3.3.1/dist/jquery.js",
+        "local": "wwwroot/lib/jquery/jquery.js",
         "integrity": "sha384-fJU6sGmyn07b+uD1nMk7/iSb4yvaowcueiQhfVgQuD98rfva8mcr1eSvjchfpMrH"
       },
       {
         "file": "/dist/jquery.min.js",
-        "cdn": "https://unpkg.com//jquery@3.3.1/dist//dist/jquery.min.js",
-        "local": "wwwroot\\lib\\jquery\\jquery.min.js",
+        "cdn": "https://unpkg.com/jquery@3.3.1/dist/jquery.min.js",
+        "local": "wwwroot/lib/jquery/jquery.min.js",
         "integrity": "sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
       },
       {
         "file": "/dist/jquery.min.map",
-        "cdn": "https://unpkg.com//jquery@3.3.1/dist//dist/jquery.min.map",
-        "local": "wwwroot\\lib\\jquery\\jquery.min.map",
+        "cdn": "https://unpkg.com/jquery@3.3.1/dist/jquery.min.map",
+        "local": "wwwroot/lib/jquery/jquery.min.map",
         "integrity": "sha384-pEQ78EPl5p+gM+UB0uM1XDIKtypMnixO8IAioIfRA2EcKicuuvv6yJ0lca3sB4A2"
       },
       {
         "file": "/dist/jquery.slim.js",
-        "cdn": "https://unpkg.com//jquery@3.3.1/dist//dist/jquery.slim.js",
-        "local": "wwwroot\\lib\\jquery\\jquery.slim.js",
+        "cdn": "https://unpkg.com/jquery@3.3.1/dist/jquery.slim.js",
+        "local": "wwwroot/lib/jquery/jquery.slim.js",
         "integrity": "sha384-sh6iinGECmk2oNezd0GDVuXqoHrZzF3PTML2nyt/lC61v2p1W7hGll/JkRFCOcMf"
       },
       {
         "file": "/dist/jquery.slim.min.js",
-        "cdn": "https://unpkg.com//jquery@3.3.1/dist//dist/jquery.slim.min.js",
-        "local": "wwwroot\\lib\\jquery\\jquery.slim.min.js",
+        "cdn": "https://unpkg.com/jquery@3.3.1/dist/jquery.slim.min.js",
+        "local": "wwwroot/lib/jquery/jquery.slim.min.js",
         "integrity": "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       },
       {
         "file": "/dist/jquery.slim.min.map",
-        "cdn": "https://unpkg.com//jquery@3.3.1/dist//dist/jquery.slim.min.map",
-        "local": "wwwroot\\lib\\jquery\\jquery.slim.min.map",
+        "cdn": "https://unpkg.com/jquery@3.3.1/dist/jquery.slim.min.map",
+        "local": "wwwroot/lib/jquery/jquery.slim.min.map",
         "integrity": "sha384-eXQhcgJpJKlQSB631xd1cBQ7sPkP5QW2DZTHQY+ChrTQVOzpgbbJ/8Fb6maccTIN"
+      }
+    ]
+  },
+  "popper.js": {
+    "version": "popper.js@1.14.3",
+    "files": [
+      {
+        "file": "/dist/esm/popper-utils.js",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/esm/popper-utils.js",
+        "local": "wwwroot/lib/popper.js/esm/popper-utils.js",
+        "integrity": "sha384-oilKCfGEIyQwAIaw8HXs+n2BGoih6T81D7Zu/YjY/iypqbf6Eg5aVhNi+SlT7//O"
+      },
+      {
+        "file": "/dist/esm/popper-utils.js.map",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/esm/popper-utils.js.map",
+        "local": "wwwroot/lib/popper.js/esm/popper-utils.js.map",
+        "integrity": "sha384-MXBAKgBAJ9wXFLve8wuo3iV1LEs/svN77gItFOEbQuQ4SR/SsOQ57QqdNxI6Vj/z"
+      },
+      {
+        "file": "/dist/esm/popper-utils.min.js",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/esm/popper-utils.min.js",
+        "local": "wwwroot/lib/popper.js/esm/popper-utils.min.js",
+        "integrity": "sha384-Cj5NRUniCaqR8uQKDGyGFym0FhUZ7MulsWtc8Atgk0ZHVnLq1ECT8OFcwrSm4KDb"
+      },
+      {
+        "file": "/dist/esm/popper-utils.min.js.map",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/esm/popper-utils.min.js.map",
+        "local": "wwwroot/lib/popper.js/esm/popper-utils.min.js.map",
+        "integrity": "sha384-izML4/bWNOowwe13rvVZsT92+wK8NovXMHRrnODcBEW7yepI2uipHupyCdJIGFA1"
+      },
+      {
+        "file": "/dist/esm/popper.js",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/esm/popper.js",
+        "local": "wwwroot/lib/popper.js/esm/popper.js",
+        "integrity": "sha384-5vDuKoZR/DmMqPZI4R/10gCLhD5r50Xt/yP75iUKR7ouiHFbcM2vqUqiOkVnZbZC"
+      },
+      {
+        "file": "/dist/esm/popper.js.map",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/esm/popper.js.map",
+        "local": "wwwroot/lib/popper.js/esm/popper.js.map",
+        "integrity": "sha384-WOLvS5eGnwVVN66xMv/9aJJKtJUqGdreBwfkmIEk43Dh6RKpHYftdbw23cBxYlTr"
+      },
+      {
+        "file": "/dist/esm/popper.min.js",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/esm/popper.min.js",
+        "local": "wwwroot/lib/popper.js/esm/popper.min.js",
+        "integrity": "sha384-ioLBYnjvzt0pX6yHXgkTaGUefCIyVwQj6LZ6iO1IlEWH1beA5sqIMZT7yNlJASd2"
+      },
+      {
+        "file": "/dist/esm/popper.min.js.map",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/esm/popper.min.js.map",
+        "local": "wwwroot/lib/popper.js/esm/popper.min.js.map",
+        "integrity": "sha384-p8iY9WGY8wYeRo/AikFKKxyfkYoD3U4wekY3hPnMbYmrrOTBeuscMRpM8Rw1CHMt"
+      },
+      {
+        "file": "/dist/popper-utils.js",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/popper-utils.js",
+        "local": "wwwroot/lib/popper.js/popper-utils.js",
+        "integrity": "sha384-nrYSE+TAv5DisOCtxRIw0ZKLaSo4/uXyZ/tnRxfgclk/3tD80QXNwF+3s2s1HYd0"
+      },
+      {
+        "file": "/dist/popper-utils.js.map",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/popper-utils.js.map",
+        "local": "wwwroot/lib/popper.js/popper-utils.js.map",
+        "integrity": "sha384-HAEDlbyJMbD/+HK2mpSCODuUFOPBN7aF4Tuy+UdX2/OC3A0U3Im7ZMtK+1iJ9Obl"
+      },
+      {
+        "file": "/dist/popper-utils.min.js",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/popper-utils.min.js",
+        "local": "wwwroot/lib/popper.js/popper-utils.min.js",
+        "integrity": "sha384-VdABTRvvxPPoA9kcWttnYus1JZ47DyZMpYrEbfxNzBn97m55M6gQF0mapVOL0qnr"
+      },
+      {
+        "file": "/dist/popper-utils.min.js.map",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/popper-utils.min.js.map",
+        "local": "wwwroot/lib/popper.js/popper-utils.min.js.map",
+        "integrity": "sha384-DveW0lefiNpfzdN/tBhYE1l3JITeTTazoQ99+ChuQtpmcVrU3iWHeLNvnkHKq2iy"
+      },
+      {
+        "file": "/dist/popper.js",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/popper.js",
+        "local": "wwwroot/lib/popper.js/popper.js",
+        "integrity": "sha384-ve0W/lgH7A8w1rDa0SOkP+TSj5Fe5ow3mZIGDjNx85JRQATc0JAO8CY5z6yzhf6P"
+      },
+      {
+        "file": "/dist/popper.js.map",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/popper.js.map",
+        "local": "wwwroot/lib/popper.js/popper.js.map",
+        "integrity": "sha384-X9cL11JnyemhBQXjj+jA2I1AR4CjyIn8hjVbvM9NdNRRX0z2KIA/VcZ8mXjEB5MW"
+      },
+      {
+        "file": "/dist/popper.min.js",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/popper.min.js",
+        "local": "wwwroot/lib/popper.js/popper.min.js",
+        "integrity": "sha384-r+VQXCrtqPjSYgKXINN+A+ihjLZc5l58j0ZJB6wuNxfr/nl93s/sfA6HnwnbY1PD"
+      },
+      {
+        "file": "/dist/popper.min.js.map",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/popper.min.js.map",
+        "local": "wwwroot/lib/popper.js/popper.min.js.map",
+        "integrity": "sha384-6vi5YsfVUxPMcMqN2eTw9h2kAx8EfYxMSonR5wf4XLMuGcQeIz2ycX/o4y9Qm1kT"
+      },
+      {
+        "file": "/dist/umd/popper-utils.js",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/umd/popper-utils.js",
+        "local": "wwwroot/lib/popper.js/umd/popper-utils.js",
+        "integrity": "sha384-Wz3oEciF/r1O1xHUGExkwdmq2m1yfVtvtiU+bGr2+UYdWjzlTC9BmIyqQZHddfsP"
+      },
+      {
+        "file": "/dist/umd/popper-utils.js.map",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/umd/popper-utils.js.map",
+        "local": "wwwroot/lib/popper.js/umd/popper-utils.js.map",
+        "integrity": "sha384-QjDEEcreHjhkLMAea0wXK0LPAnsv/zv/hv0gvFf24wZkjxoYMdOWlwOpQFu8w8b7"
+      },
+      {
+        "file": "/dist/umd/popper-utils.min.js",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/umd/popper-utils.min.js",
+        "local": "wwwroot/lib/popper.js/umd/popper-utils.min.js",
+        "integrity": "sha384-z8wkOMgq2v2hT60D4KKBD63yrBQYsBMl+PFKu104qOw00TF14ZBREp6GviIGFlnS"
+      },
+      {
+        "file": "/dist/umd/popper-utils.min.js.map",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/umd/popper-utils.min.js.map",
+        "local": "wwwroot/lib/popper.js/umd/popper-utils.min.js.map",
+        "integrity": "sha384-zeNras1asJHlRQuJyh2SEYGd9vwdECfyosEb7CfmnH5y0HdEZdrLth8bBFxLmdfx"
+      },
+      {
+        "file": "/dist/umd/popper.js",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/umd/popper.js",
+        "local": "wwwroot/lib/popper.js/umd/popper.js",
+        "integrity": "sha384-AsJUT69WgSCIrLgOnMRkNjLvBl0aoHtB3vBDnAEOKRfxKMm7gvmSTJUZCefoYWdA"
+      },
+      {
+        "file": "/dist/umd/popper.js.map",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/umd/popper.js.map",
+        "local": "wwwroot/lib/popper.js/umd/popper.js.map",
+        "integrity": "sha384-aW2XVGhi9OwdVPsZamn2/TdcjGfftWPXjLiAUeip2uvJN6KvZxb+B0hj9wSzn/A3"
+      },
+      {
+        "file": "/dist/umd/popper.min.js",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/umd/popper.min.js",
+        "local": "wwwroot/lib/popper.js/umd/popper.min.js",
+        "integrity": "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      },
+      {
+        "file": "/dist/umd/popper.min.js.map",
+        "cdn": "https://unpkg.com/popper.js@1.14.3/dist/umd/popper.min.js.map",
+        "local": "wwwroot/lib/popper.js/umd/popper.min.js.map",
+        "integrity": "sha384-i66DljtOkms3kxImMzKUFeExorU2X/nUYuZiYybVXTLCKSeHqE8hUvLVrmbexiT3"
+      }
+    ]
+  },
+  "bootswatch/darkly": {
+    "version": "bootswatch@4.0.0",
+    "files": [
+      {
+        "file": "/dist/darkly/_bootswatch.scss",
+        "cdn": "https://unpkg.com/bootswatch@4.0.0/dist/darkly/_bootswatch.scss",
+        "local": "wwwroot/lib/bootswatch/darkly/_bootswatch.scss",
+        "integrity": "sha384-IiVHP6uJPrhHq6Z5TXKtIxjUfRvsOBZcEs/64iiTEp+01V0qeKOFlZ6aFhvLEW0D"
+      },
+      {
+        "file": "/dist/darkly/_variables.scss",
+        "cdn": "https://unpkg.com/bootswatch@4.0.0/dist/darkly/_variables.scss",
+        "local": "wwwroot/lib/bootswatch/darkly/_variables.scss",
+        "integrity": "sha384-Z+HcDTVnK/D9rVgzzRrQc7IV60sNYPAWtWukgoKDuerdRDatAvQk0AgkVjcHrRtb"
+      },
+      {
+        "file": "/dist/darkly/bootstrap.css",
+        "cdn": "https://unpkg.com/bootswatch@4.0.0/dist/darkly/bootstrap.css",
+        "local": "wwwroot/lib/bootswatch/darkly/bootstrap.css",
+        "integrity": "sha384-MtDYCLkEI7u+9Bnye5jvJeQwVrOZQ2QFGEyyNY7gZg9cn7lU27HCFhlh3C41GW6o"
+      },
+      {
+        "file": "/dist/darkly/bootstrap.min.css",
+        "cdn": "https://unpkg.com/bootswatch@4.0.0/dist/darkly/bootstrap.min.css",
+        "local": "wwwroot/lib/bootswatch/darkly/bootstrap.min.css",
+        "integrity": "sha384-p8bH4RlA/kdF4wbAoep+/6VeOQI2IAWa9zLjTIQbQLv2FuCjX/W/FkdYdeKISDvK"
       }
     ]
   }

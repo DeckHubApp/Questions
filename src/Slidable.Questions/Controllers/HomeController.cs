@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -33,11 +33,11 @@ namespace Slidable.Questions.Controllers
             return "Hello";
         }
 
-        [HttpGet("{presenter}/{slug}")]
-        public async Task<ActionResult<List<QuestionDto>>> GetForShow(string presenter, string slug,
+        [HttpGet("{place}/{presenter}/{slug}")]
+        public async Task<ActionResult<QuestionsDto>> GetForShow(string place, string presenter, string slug,
             CancellationToken ct)
         {
-            var showIdentifier = $"{presenter}/{slug}";
+            var showIdentifier = ShowIdentifier(place, presenter, slug);
             List<Question> questions;
             try
             {
@@ -53,13 +53,19 @@ namespace Slidable.Questions.Controllers
                 _logger.LogError(EventIds.DatabaseError, ex, ex.Message);
                 throw;
             }
-            return questions.Select(QuestionDto.FromQuestion).ToList();
+
+            return new QuestionsDto
+            {
+                UserIsAuthenticated = User.Identity.IsAuthenticated,
+                Questions = questions.Select(QuestionDto.FromQuestion).ToList()
+            };
         }
 
-        [HttpGet("{presenter}/{slug}/{slide:int}")]
-        public async Task<ActionResult<List<QuestionDto>>> GetForSlide(string presenter, string slug, int slide, CancellationToken ct)
+        [HttpGet("{place}/{presenter}/{slug}/{slide:int}")]
+        public async Task<ActionResult<List<QuestionDto>>> GetForSlide(string place, string presenter, string slug,
+            int slide, CancellationToken ct)
         {
-            var showIdentifier = $"{presenter}/{slug}";
+            var showIdentifier = ShowIdentifier(place, presenter, slug);
             List<Question> questions;
             try
             {
@@ -75,6 +81,7 @@ namespace Slidable.Questions.Controllers
                 _logger.LogError(EventIds.DatabaseError, ex, ex.Message);
                 throw;
             }
+
             return questions.Select(QuestionDto.FromQuestion).ToList();
         }
 
@@ -92,24 +99,30 @@ namespace Slidable.Questions.Controllers
                 _logger.LogError(EventIds.DatabaseError, ex, ex.Message);
                 throw;
             }
+
             if (question == null) return NotFound();
             return QuestionDto.FromQuestion(question);
         }
 
         [Authorize]
-        [HttpPost("{presenter}/{slug}/{slide:int}")]
-        public async Task<IActionResult> Ask(string presenter, string slug, int slide,
+        [HttpPost("{place}/{presenter}/{slug}/{slide:int}")]
+        public async Task<IActionResult> Ask(string place, string presenter, string slug, int slide,
             [FromBody] QuestionDto dto, CancellationToken ct)
         {
-            var identifier = $"{presenter}/{slug}";
+            var showIdentifier = ShowIdentifier(place, presenter, slug);
+            var from = User.FindFirstValue(SlidableClaimTypes.Handle);
+            if (string.IsNullOrEmpty(from))
+            {
+                return Forbid();
+            }
 
             var question = new Question
             {
                 Uuid = Guid.NewGuid().ToString(),
-                Show = identifier,
+                Show = showIdentifier,
                 Slide = slide,
                 Text = dto.Text,
-                From = dto.From,
+                From = from,
                 Time = dto.Time
             };
 
@@ -135,7 +148,7 @@ namespace Slidable.Questions.Controllers
             try
             {
                 answers = await _context.Answers
-                    .Where(a => a.Question.Uuid == uuid)
+                    .Where(a => a.QuestionUuid == uuid)
                     .OrderBy(a => a.Time)
                     .ToListAsync(ct)
                     .ConfigureAwait(false);
@@ -145,6 +158,7 @@ namespace Slidable.Questions.Controllers
                 _logger.LogError(EventIds.DatabaseError, ex, ex.Message);
                 throw;
             }
+
             return Ok(answers.Select(a => AnswerDto.FromAnswer(uuid, a)));
         }
 
@@ -161,6 +175,7 @@ namespace Slidable.Questions.Controllers
                 var answer = new Answer
                 {
                     QuestionId = question.Id,
+                    QuestionUuid = uuid,
                     User = dto.User,
                     Text = dto.Text,
                     Time = dto.Time
@@ -174,7 +189,11 @@ namespace Slidable.Questions.Controllers
                 _logger.LogError(EventIds.DatabaseError, ex, ex.Message);
                 throw;
             }
+
             return Accepted();
         }
+
+        private static string ShowIdentifier(string place, string presenter, string slug)
+            => $"{place}/{presenter}/{slug}";
     }
 }

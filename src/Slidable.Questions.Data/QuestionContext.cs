@@ -25,6 +25,10 @@ namespace Slidable.Questions.Data
             builder.Entity<Question>()
                 .HasIndex(q => q.Show)
                 .IsUnique(false);
+            
+            builder.Entity<Answer>()
+                .HasIndex(a => a.QuestionUuid)
+                .IsUnique(false);
         }
     }
 }

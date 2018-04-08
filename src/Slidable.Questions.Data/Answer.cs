@@ -7,6 +7,8 @@ namespace Slidable.Questions.Data
     {
         public int Id { get; set; }
         public int QuestionId { get; set; }
+        [MaxLength(40)]
+        public string QuestionUuid { get; set; }
         [MaxLength(16)]
         public string User { get; set; }
         public string Text { get; set; }
