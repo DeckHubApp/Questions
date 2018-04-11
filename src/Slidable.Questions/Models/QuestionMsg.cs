@@ -13,5 +13,6 @@ namespace Slidable.Questions.Models
         [Key(2)] public string Text { get; set; }
         [Key(3)] public DateTimeOffset Time { get; set; }
         [Key(4)] public string Id { get; set; }
+        [Key(5)] public int Slide { get; set; }
     }
 }

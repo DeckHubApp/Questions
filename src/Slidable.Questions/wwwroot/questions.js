@@ -1,9 +1,8 @@
 ﻿(function(Slidable, currentScript) {
 
-  Slidable = Slidable || {};
-
   function _urlPrefix(src) {
-    let parts = src.split('/').filter(s => !!s).slice(3, -1);
+    var url = new URL(src, document.location.href);
+    let parts = url.pathname.split('/').filter(s => !!s).slice(0, -1);
     if (parts.length === 0) {
       return '';
     }
@@ -50,9 +49,8 @@
       .then(checkStatus);
   }
 
-  const questionFormComponent =
-  {
-    template: `<form id="question-form" v-on:submit="submit" class="form-inline">
+  const questionFormComponent = {
+    template: `<form id="question-form" v-on:submit="submit" class="m-2">
 <div class="input-group">
   <input id="questionText" v-model="text" placeholder="Ask a question" class="form-control" />
   <div class="input-group-append">
@@ -123,7 +121,11 @@
       questions: []
     }),
     template:
-      `<div class="question-list"><h4>Questions</h4><question-card v-for="question in questions" v-bind="question"></question-card></div>`
+      `
+<div class="question-list m-2">
+  <h6>All questions:</h6>
+  <question-card v-for="question in questions" v-bind="question"></question-card>
+</div>`
   };
 
   const vm = new Vue({
@@ -132,6 +134,6 @@
       'question-list': questionListComponent,
       'question-form': questionFormComponent
     },
-    template: `<div><question-list></question-list><question-form></question-form></div>`
+    template: `<div><question-form></question-form><question-list></question-list></div>`
   });
-})(window.Slidable, document.currentScript);
+})(window.Slidable || {}, document.currentScript);

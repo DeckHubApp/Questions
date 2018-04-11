@@ -29,7 +29,8 @@ namespace Slidable.Questions
                 From = question.From,
                 Text = question.Text,
                 Time = question.Time,
-                Id = question.Uuid
+                Id = question.Uuid,
+                Slide = question.Slide
             };
             _subscriber.Publish("slidable:question", MessagePackSerializer.Serialize(m));
         }
