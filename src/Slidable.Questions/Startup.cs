@@ -70,7 +70,9 @@ namespace Slidable.Questions
                 b.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
             });
 
-            services.AddMvc();
+            services.AddMvc()
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                .AddMetrics();
         }
 
         private void ConfigureAuth(IServiceCollection services)
