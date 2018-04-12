@@ -27,11 +27,20 @@
 
   function questionsUrl() {
     const path = pagePath().split('/').filter(s => !!s);
-    const slideNumber = path.pop();
+    let slideNumber = path.pop();
     const slug = path.pop();
     const presenter = path.pop();
     const place = path.pop();
-    return `${urlPrefix}/${place}/${presenter}/${slug}/${slideNumber}`;
+
+    const show = Slidable.show || `${place}/${presenter}/${slug}`;
+    if (Slidable.slide === 'all') {
+      return `${urlPrefix}/${show}`;
+    }
+    if (Slidable.slide || Slidable.slide === 0) {
+      slideNumber = Slidable.slide;
+    }
+
+    return `${urlPrefix}/${show}/${slideNumber}`;
   }
 
   function load() {
@@ -107,12 +116,18 @@
       load()
         .then(questions => {
           for (const question of questions) {
-            const existing = this.questions.find(q => q.id === question.id);
-            if (!existing) {
-              this.questions.push(question);
-            }
+            this.add(question);
           }
         });
+      Slidable.Hub.subject('question').subscribe(this.add);
+    },
+    methods: {
+      add: function add(question) {
+        const existing = this.questions.find(q => q.id === question.id);
+        if (!existing) {
+          this.questions.unshift(question);
+        }
+      }
     },
     components: {
       'question-card': questionCardComponent
@@ -136,4 +151,4 @@
     },
     template: `<div><question-form></question-form><question-list></question-list></div>`
   });
-})(window.Slidable || {}, document.currentScript);
+})(window.Slidable || (window.Slidable = {}), document.currentScript);

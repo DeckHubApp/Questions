@@ -14,6 +14,7 @@ namespace Slidable.Questions
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseStandardMetrics()
                 .UseStartup<Startup>();
     }
 }
