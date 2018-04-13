@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: questions-migrate
-  namespace: shtik
+  namespace: slidable
 spec:
   template:
     metadata:
@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
       - name: questions-migrate
-        image: shtik/questions-migrate:1.1.0
+        image: slidable/questions-migrate:1.0.0-alpha1
         args: ["$(SECRET_CONNSTR)"]
         env:
           - name: SECRET_CONNSTR
