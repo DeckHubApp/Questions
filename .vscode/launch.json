@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/src/Slidable.Questions/bin/Debug/netcoreapp2.1/Slidable.Questions.dll",
+            "program": "${workspaceFolder}/src/DeckHub.Questions/bin/Debug/netcoreapp2.1/DeckHub.Questions.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/src/Slidable.Questions",
+            "cwd": "${workspaceFolder}/src/DeckHub.Questions",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
             "launchBrowser": {

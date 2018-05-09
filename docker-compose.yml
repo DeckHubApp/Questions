@@ -5,7 +5,7 @@ services:
   postgres:
     image: postgres:10.3-alpine
     environment:
-      POSTGRES_USER: slidable
+      POSTGRES_USER: deckhub
       POSTGRES_PASSWORD: SecretSquirrel
     ports:
       - 5432:5432

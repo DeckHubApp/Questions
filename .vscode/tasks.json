@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/src/Slidable.Questions/Slidable.Questions.csproj"
+                "${workspaceFolder}/src/DeckHub.Questions/DeckHub.Questions.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
