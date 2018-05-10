@@ -113,28 +113,12 @@
   const questionListComponent =
   {
     created() {
-      load()
-        .then(questions => {
-          for (const question of questions) {
-            this.add(question);
-          }
-        });
-      DeckHub.Hub.subject('question').subscribe(this.add);
+      console.log(this.questions);
     },
-    methods: {
-      add: function add(question) {
-        const existing = this.questions.find(q => q.id === question.id);
-        if (!existing) {
-          this.questions.unshift(question);
-        }
-      }
-    },
+    props: ['questions'],
     components: {
       'question-card': questionCardComponent
     },
-    data: () => ({
-      questions: []
-    }),
     template:
       `
 <div class="question-list m-2">
@@ -149,6 +133,28 @@
       'question-list': questionListComponent,
       'question-form': questionFormComponent
     },
-    template: `<div><question-form></question-form><question-list></question-list></div>`
+    data: {
+      questions: [],
+      userIsAuthenticated: false
+    },
+    methods: {
+      add: function add(question) {
+        const existing = this.questions.find(q => q.id === question.id);
+        if (!existing) {
+          this.questions.unshift(question);
+        }
+      }
+    },
+    created() {
+      load()
+        .then(q => {
+          this.userIsAuthenticated = !!q.userIsAuthenticated;
+          for (const question of q.questions) {
+            this.add(question);
+          }
+        });
+      DeckHub.Hub.subject('question').subscribe(this.add);
+    },
+    template: `<div><question-form v-if="userIsAuthenticated"></question-form><question-list v-bind:questions="questions"></question-list></div>`
   });
 })(window.DeckHub || (window.DeckHub = {}), document.currentScript);

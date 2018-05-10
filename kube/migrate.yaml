@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
       - name: questions-migrate
-        image: deckhub/questions-migrate:1.0.0-alpha1
+        image: deckhub/questions-migrate:1.0.0-alpha2
         args: ["$(SECRET_CONNSTR)"]
         env:
           - name: SECRET_CONNSTR

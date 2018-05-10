@@ -62,7 +62,7 @@ namespace DeckHub.Questions.Controllers
         }
 
         [HttpGet("{place}/{presenter}/{slug}/{slide:int}")]
-        public async Task<ActionResult<List<QuestionDto>>> GetForSlide(string place, string presenter, string slug,
+        public async Task<ActionResult<QuestionsDto>> GetForSlide(string place, string presenter, string slug,
             int slide, CancellationToken ct)
         {
             var showIdentifier = ShowIdentifier(place, presenter, slug);
@@ -82,7 +82,11 @@ namespace DeckHub.Questions.Controllers
                 throw;
             }
 
-            return questions.Select(QuestionDto.FromQuestion).ToList();
+            return new QuestionsDto
+            {
+                UserIsAuthenticated = User.Identity.IsAuthenticated,
+                Questions = questions.Select(QuestionDto.FromQuestion).ToList()
+            };
         }
 
         [HttpGet("{uuid}")]

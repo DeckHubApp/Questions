@@ -11,7 +11,7 @@ spec:
         app: questions
     spec:
       containers:
-      - image: deckhub/questions:1.0.0-alpha1
+      - image: deckhub/questions:1.0.0-alpha2
         imagePullPolicy: Always
         name: questions
         env:
@@ -19,8 +19,6 @@ spec:
             value: '/questions'
           - name: Redis__Host
             value: 'redis'
-          - name: Runtime__IdentityPathPrefix
-            value: 'i'
           - name: AppMetrics__InfluxDbServer
             value: 'http://rlmetrics.eastus.cloudapp.azure.com:8086'
           - name: AppMetrics__InfluxDbDatabase
